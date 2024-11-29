@@ -49,3 +49,22 @@ const person = {
     role: 'Software Engineer',
   };
   
+// Object destructuring:
+const { name, role } = person;
+
+console.log(name); // 'Alex'
+console.log(role); // 'Software Engineer'
+
+// Equivalent in traditional dot notation:
+console.log(person.name); // 'Alex'
+console.log(person.role); // 'Software Engineer'
+  
+// Given the following object, use destructuring to create variables `make` and `model` that will hold the respective values.
+
+const car = {
+    make: 'Audi',
+    model: 'q5',
+  };
+  
+// Your code here
+const { make, model } = car  
