@@ -58,7 +58,9 @@ console.log(role); // 'Software Engineer'
 // Equivalent in traditional dot notation:
 console.log(person.name); // 'Alex'
 console.log(person.role); // 'Software Engineer'
-  
+ 
+
+//Exercise 3: Destructuring objects
 // Given the following object, use destructuring to create variables `make` and `model` that will hold the respective values.
 
 const car = {
@@ -68,3 +70,50 @@ const car = {
   
 // Your code here
 const { make, model } = car  
+
+/*
+
+Review: Applying the spread operator on arrays
+
+The spread operator (...) gives us a way to duplicate or combine arrays. Instead of manually
+copying elements from one array to another using loops, the spread operator allows us to directly copy the elements of one
+array into another.
+
+*/
+const originalArray = [1, 2, 3];
+const duplicateArray = [...originalArray];
+
+console.log(duplicateArray); // [1, 2, 3]
+
+/*
+In the example above, duplicateArray is an entirely separate array produced by copying the contents of originalArray.
+
+This differs from simply assigning one array to another, which only creates a reference, not a copy:
+const originalArray = [1, 2, 3];
+const referenceArray = originalArray; // referenceArray is now a reference to originalArray
+
+referenceArray.push(4); // Modifying referenceArray also modifies originalArray
+console.log(originalArray); // [1, 2, 3, 4]
+
+const fruits = ['apple', 'orange', 'banana'];
+const vegetables = ['broccoli', 'carrot', 'spinach'];
+
+const fruitsAndVegetables = [...fruits, ...vegetables];
+
+console.log(fruitsAndVegetables); // ['apple', 'orange', 'banana', 'broccoli', 'carrot', 'spinach']
+
+🚨 When merging multiple arrays, be sure to include the spread operator. Not doing so can result in unintentional nesting.
+*/
+
+//Exercise 4: Applying the spread operator on arrays
+
+// Duplicate the following array using the spread operator and assign it to `controversialPizzaToppings`. Then, log the variable.
+
+// const pizzaToppings = ['Pineapple', 'Olives', 'Anchovies']; just use the above value
+
+// Your code here
+const controversialPizzaToppings = [...pizzaToppings]
+
+controversialPizzaToppings.map( controversialPizzaTopping => {
+    console.log(controversialPizzaTopping)
+})
