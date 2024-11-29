@@ -241,3 +241,69 @@ const userProfile = {
     [propertyName] : 'johndoe@gmail.com'
 }
 
+/*
+
+Review: import and export
+
+In JavaScript, the import and export syntax allows us to share code between different files. This is a more modern approach compared to the require and module.exports syntax used in CommonJS.
+
+With export, you can make functions, objects, or primitives available for use in other files.
+
+There are two main types of exports:
+
+Named exports: For exporting multiple items from a file:
+export const myNumber = 123;
+export const myString = 'Hello';
+
+Default exports: For exporting a single item from a file:
+export default function superCoolFunction() {
+    //super cool stuff
+}
+
+🏆 It’s possible to mix default and named exports in a single module,
+but it’s a best practice to stick to one style for consistency and clarity.
+
+Using import, you can bring those exported items into another file.
+
+Importing named exports:
+import { myNumber, myString } from './myData.js';
+
+Importing a default export:
+import superCoolFunction from './superCoolFunction.js';
+
+You can also import all named exports as a single object, which is useful when dealing
+with modules that export several items:
+
+import * as MyData from './myData.js';
+console.log(MyData.myNumber);
+console.log(MyData.myString);
+
+This allows for more organized code by separating concerns into modules.
+
+*/
+
+// Exercise 7: Import and Export
+/*
+Follow the steps below for some practice with import and export. \
+Update the values for default, age, and job accordingly:
+
+1. npm init -y
+2. Add the following property to package.json: "type":"module",
+3. Create two files: exportingFile.js and importingFile.js:
+    touch exportingFile.js
+    touch importingFile.js
+4. In exportingFile.js add the following:
+    export default 'Matt';
+5. In importingFile.js add the following:
+    import name from './exportingFile.js';
+    console.log(name);
+6. Run importingFile.js like so:
+    node importingFile.js
+7. To export additional values, update exportingFile.js like so:
+    export default 'Matt';
+    export const age = 43;
+    export const job = 'programmer';
+8. These additions can be imported by updating importingFile.js like so:
+    import name, { age, job } from './exportingFile.js';
+    console.log(name, age, job);
+*/
