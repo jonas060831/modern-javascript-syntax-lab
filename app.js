@@ -508,3 +508,63 @@ let LANG = localLangConfig || 'en'
 // Log the result
 console.log('Language setting:', LANG);
 
+// 2. SET WEBSITE THEME
+
+const userSavedTheme = null; // Change to 'dark', 'contrast', etc., or keep it null
+
+// a. Create a variable called USER_THEME
+// b. Assign USER_THEME the value of userSavedTheme or 'light' as a default
+
+// Your code here
+
+let USER_THEME = userSavedTheme || 'light'
+// Log the result
+console.log('User theme setting:', USER_THEME);
+
+/*
+
+Review: Optional chaining
+
+Optional chaining is a way to safely access deeply nested properties in an object.
+This approach can help us avoid the errors that occur when attempting to access
+undefined or null properties.
+
+Consider a scenario where we attempt to access a property that doesn’t exist,
+which normally results in an error:
+
+const adventurer = {
+  name: 'Alice',
+};
+
+console.log(adventurer.dog.name); // TypeError: Cannot read properties of undefined (reading 'name')
+
+In this application, it’s probable that the dog property might be added in later.
+This is where some optional chaining might prove useful.
+
+Using console.log(adventurer.dog?.name); will allow our code to run without an error:
+
+const adventurer = {
+  name: 'Alice',
+};
+
+let dog = adventurer.dog?.name;
+
+console.log(dog); // undefined
+
+Now, instead of the non existent property causing an error, our code logs a value of undefined.
+*/
+
+//Exercise 11: Optional chaining
+
+// Now check for `cat.age` on `adventurer`. See how it errors out? Use optional chaining in a console.log that it returns undefined instead.
+
+const adventurer = {
+    name: 'Alice',
+};
+  
+let cat; 
+
+// Your code here
+cat = adventurer.cat
+
+console.log(cat?.age)
