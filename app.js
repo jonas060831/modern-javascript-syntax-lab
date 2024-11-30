@@ -565,6 +565,10 @@ const adventurer = {
 let cat; 
 
 // Your code here
-cat = adventurer.cat
+cat = adventurer.cat?.age
 
-console.log(cat?.age)
+
+
+
+
+console.log(cat)
