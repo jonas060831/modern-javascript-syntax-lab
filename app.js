@@ -565,10 +565,10 @@ const adventurer = {
 let cat; 
 
 // Your code here
-cat = adventurer.cat?.age
+cat = adventurer.cat
 
 
 
 
-
+console.log(cat?.age)
 console.log(cat)
